@@ -1,24 +1,20 @@
         //conditions
-/*  Write a while loop that:
+/*  Use the following `while` loop to write out the song "99 bottles of juice".
+ * Log the your lyrics to the console.
+ *
+ * Note
+ *   - Each line of the lyrics needs to be logged to the same line.
+ *   - The pluralization of the word "bottle" changes from "2 bottles" to "1 bottle" to "0 bottles".
+ */
 
-Loop through the numbers 1 to 20
-If the number is divisible by 3, print "Julia"
-If the number is divisible by 5, print "James"
-If the number is divisible by 3 and 5, print "JuliaJames"
-If the number is not divisible by 3 or 5, print the number
-*/
-
-var x = 1;
-
-while (x <= 20) {
-  if (x % 3 == 0 && x % 5 == 0){
-    console.log("JuliaJames");
-  }else if (x % 3 == 0 && x % 5 !== 0){
-    console.log("Julia");
-  }else if (x % 3 !== 0 && x % 5 == 0){
-    console.log("James");
+var num = 99;
+while (num > 0){
+  if (num == 2){
+    console.log(`${num} bottles of juice on the wall! ${num} bottles of juice! Take one down, pass it around... ${num - 1} bottle of juice on the wall!`);
+  }else if (num == 1){
+  console.log(`${num} bottle of juice on the wall! ${num} bottle of juice! Take one down, pass it around... ${num - 1} bottles of juice on the wall!`);
   }else {
-    console.log(x);
+  console.log(`${num} bottles of juice on the wall! ${num} bottles of juice! Take one down, pass it around... ${num - 1} bottles of juice on the wall!`);
   }
-  x += 1;
+  num -= 1;
 }
