@@ -1,20 +1,30 @@
         //conditions
-/*  Use the following `while` loop to write out the song "99 bottles of juice".
- * Log the your lyrics to the console.
- *
- * Note
- *   - Each line of the lyrics needs to be logged to the same line.
- *   - The pluralization of the word "bottle" changes from "2 bottles" to "1 bottle" to "0 bottles".
- */
+/* NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. During the final minute, NASA has 6 tasks to complete:
 
-var num = 99;
-while (num > 0){
-  if (num == 2){
-    console.log(`${num} bottles of juice on the wall! ${num} bottles of juice! Take one down, pass it around... ${num - 1} bottle of juice on the wall!`);
-  }else if (num == 1){
-  console.log(`${num} bottle of juice on the wall! ${num} bottle of juice! Take one down, pass it around... ${num - 1} bottles of juice on the wall!`);
-  }else {
-  console.log(`${num} bottles of juice on the wall! ${num} bottles of juice! Take one down, pass it around... ${num - 1} bottles of juice on the wall!`);
-  }
-  num -= 1;
+Orbiter transfers from ground to internal power (T-50 seconds)
+Ground launch sequencer is go for auto sequence start (T-31 seconds)
+Activate launch pad sound suppression system (T-16 seconds)
+Activate main engine hydrogen burnoff system (T-10 seconds)
+Main engine start (T-6 seconds)
+Solid rocket booster ignition and liftoff! (T-0 seconds)*/
+
+let count = 60;
+
+while (count >= 0){
+  switch (count){
+    case 50: console.log(`Orbiter transfers from ground to internal power (T-${count} seconds)`);
+    break;
+    case 31: console.log(`Ground launch sequencer is go for auto sequence start (T-${count} seconds)`);
+    break;
+    case 16: console.log(`Activate launch pad sound suppression system (T-${count} seconds)`);
+    break;
+    case 10: console.log(`Activate main engine hydrogen burnoff system (T-${count} seconds)`);
+    break;
+    case 6: console.log(`Main engine start (T-${count} seconds)`);
+    break;
+    case 0: console.log(`Solid rocket booster ignition and liftoff! (T-${count} seconds)`);
+    break;
+    default: console.log(`T-${count} seconds`);
+    break;
+  }count -= 1;
 }
