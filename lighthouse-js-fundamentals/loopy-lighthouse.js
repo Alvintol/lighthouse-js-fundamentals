@@ -6,9 +6,9 @@ const loopyLighthouse = (range, multiple, words) => {
     
     if (multi0 === 0 && multi1 === 0) {
       count = words[0] + words[1];
-    } else if (multi0 === 0 && multi1 !== 0) {
+    } else if (multi0 === 0) {
       count = words[0];
-    } else if (multi0 !== 0 && multi1 === 0) {
+    } else if (multi1 === 0) {
       count = words[1];
     } console.log(count);
   }
